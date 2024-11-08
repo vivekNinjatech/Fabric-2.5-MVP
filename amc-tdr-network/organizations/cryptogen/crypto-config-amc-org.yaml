@@ -1,0 +1,69 @@
+# ---------------------------------------------------------------------------
+# Crypto Config for AMC TDR Project Hyperledger Fabric Network
+# ---------------------------------------------------------------------------
+
+PeerOrgs:
+  # ---------------------------------------------------------------------------
+  # AMC Org - Responsible for TDR issuance
+  # ---------------------------------------------------------------------------
+  - Name: AMCOrg
+    Domain: amcorg.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - localhost
+    Users:
+      Count: 1
+
+  # ---------------------------------------------------------------------------
+  # Municipal Registrars Org - Handles validation and verification of TDRs
+  # ---------------------------------------------------------------------------
+  - Name: MunicipalRegistrarsOrg
+    Domain: municipalregistrars.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - localhost
+    Users:
+      Count: 1
+
+  # ---------------------------------------------------------------------------
+  # Builders Org - Represents TDR holders and builders in the system
+  # ---------------------------------------------------------------------------
+  - Name: BuildersOrg
+    Domain: buildersorg.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - localhost
+    Users:
+      Count: 1
+
+  # ---------------------------------------------------------------------------
+  # Certifying Authority (CA) Org - Manages identity and certificate issuance
+  # ---------------------------------------------------------------------------
+  - Name: CAOrg
+    Domain: caorg.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - localhost
+    Users:
+      Count: 1
+
+  # ---------------------------------------------------------------------------
+  # Regulatory Body Org - Oversees compliance and audits
+  # ---------------------------------------------------------------------------
+  - Name: RegulatoryBodyOrg
+    Domain: regulatorybody.example.com
+    EnableNodeOUs: true
+    Template:
+      Count: 1
+      SANS:
+        - localhost
+    Users:
+      Count: 1
